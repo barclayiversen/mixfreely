@@ -1,0 +1,16 @@
+<head>
+    <link href="https://vjs.zencdn.net/7.8.2/video-js.css" rel="stylesheet" />
+  
+    <!-- If you'd like to support IE8 (for Video.js versions prior to v7) -->
+    <script src="https://vjs.zencdn.net/ie8/1.1.2/videojs-ie8.min.js"></script>
+  </head>
+  
+  <body>
+    <video class="video-js vjs-default-skin">
+        <source src="https://spracto.net/hls/test.m3u8" type="application/x-mpegURL">
+      </video>
+  
+    <script src="https://vjs.zencdn.net/7.8.2/video.js"></script>
+  </body>
+
+  <script>videojs(document.querySelector('.video-js'));</script>
