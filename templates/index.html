@@ -4,6 +4,7 @@
 <head>
     <!-- Required meta tags -->
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- <link rel="stylesheet" href="../static/style.css"> -->
     <link href="https://vjs.zencdn.net/7.8.2/video-js.css" rel="stylesheet" />
     <!-- <link rel="stylesheet" href="/static/static/video-js.css"> -->
@@ -19,22 +20,28 @@
             <a href="https://addons.mozilla.org/en-US/firefox/addon/native_hls_playback/">Firefox</a> or <a
                 href="https://chrome.google.com/webstore/detail/native-hls-playback/emnphkkblegpebimobpbekeedfgemhof?hl=en-US">Chrome.</a>
         </h4>
+ 	
 
-        <iframe frameborder="1" scrolling="yes" id="music_user"
-            src="https://twitch.tv/embed/music_user/chat?parent=thatsrickdiculous.com" height="500" width="350">
-        </iframe>
-        <video class="video-js vjs-default-skin" controls id="joe">
-            <source src="http://10.168.0.2:8080/hls/test.m3u8" type="application/x-mpegURL" />
-        </video>
-        <video class="video-js vjs-default-skin" controls id="barc">
-            <source src="http://10.168.0.2:8080/hls/barclay.m3u8" type="application/x-mpegURL" />
+	<div class="main">
+        	<video class="video-js vjs-default-skin" controls id="video1">
+            	<source src="https://live.thatsrickdiculous.com/hls/KRRIFZ.m3u8" type="application/x-mpegURL" />
+        	</video>
+        </div>
+	        <div class="menu">
+                <iframe frameborder="1" scrolling="yes" id="music_user"
+                src="https://twitch.tv/embed/music_user/chat?parent=thatsrickdiculous.com" height="500" width="350">
+                </iframe>
+        </div>
+
+	 <!--<video class="video-js vjs-default-skin" controls id="video2">
+            <source src="http://34.94.242.217:8080/hls/EYTSEJ.m3u8" type="application/x-mpegURL" />
             </p>
-        </video>
+        </video>-->
     </div>
     <!-- <script src="static/video.js"></script> -->
     <script src="https://vjs.zencdn.net/7.8.2/video.js"></script>
-    <script>videojs(document.querySelector('#barc'));</script>
-    <script>videojs(document.querySelector('#joe'));</script>
+    <script>videojs(document.querySelector('#video1'));</script>
+  <!--  <script>videojs(document.querySelector('#video2'));</script> -->
     <!-- <script src="videojs-contrib-hls.min.js"></script> -->
 
 </body>
@@ -53,4 +60,14 @@
     .banner {
       text-align: center;
     }
+    
+    .menu {
+        width: 20%;
+        float: left;
+	padding-left: 1%;
+    }
+    .main {
+        width: auto;
+        float: left;
+    }  
 </style>
