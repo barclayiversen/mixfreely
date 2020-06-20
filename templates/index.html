@@ -2,64 +2,54 @@
 <html lang="en">
 
 <head>
-  <!-- Required meta tags -->
-  <meta charset="utf-8">
-  <!-- <link rel="stylesheet" href="../static/style.css"> -->
-  <link href="https://vjs.zencdn.net/7.8.2/video-js.css" rel="stylesheet" />
-  <!-- <link rel="stylesheet" href="/static/static/video-js.css"> -->
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <!-- <link rel="stylesheet" href="../static/style.css"> -->
+    <link href="https://vjs.zencdn.net/7.8.2/video-js.css" rel="stylesheet" />
+    <!-- <link rel="stylesheet" href="/static/static/video-js.css"> -->
 
-  <title>Hello, world!</title>
+    <title>Hello, world!</title>
 </head>
 
 <body>
-  <div class="container">
-    <h1>Welcome to Spracto dot net!</h1>
-    <h2>Featuring:</h2>
-    <h4>Spracto</h4>
-    <h5>&</h5>
-    <h4>Joe Dirty</h4>
-    <h3><a href="/app/test">TEST</a></h3>
-    <p>psst...looking for the media request system? (out of order for now while I build a streaming service) its at <a
-        href="https://spracto.net/ombi"> https://spracto.net/ombi </a>
-        <iframe frameborder="1" scrolling="yes" id="music_user" src="https://twitch.tv/embed/music_user/chat?parent=spracto.net"
-        height="500" width="350">
-      </iframe>
-      <video class="video-js vjs-default-skin" controls id="joe">
-        <source src="https://spracto.net/hls/test.m3u8" type="application/x-mpegURL" />
-        <p class="vjs-no-js">
-          To view this video you'll either need to use safari or the hls extension for Firefox and Chrome. 
-        </p>
-      </video>
-      <iframe frameborder="1" scrolling="yes" id="spracto" src="https://twitch.tv/embed/spracto/chat?parent=spracto.net"
-        height="500" width="350">
-      </iframe>
-      <video class="video-js vjs-default-skin" controls id="barc">
-        <source src="https://spracto.net/hls/barclay.m3u8" type="application/x-mpegURL" />
-        <p class="vjs-no-js"></p>
-        To view this video please enable JavaScript, and consider upgrading to a
-        web browser thtes
-        <a href="https://videojs.com/html5-video-support/" target="_blank">supports HTML5 video</a>
-    </p>
-    </video>
-  </div>
-  <!-- <script src="static/video.js"></script> -->
-  <script src="https://vjs.zencdn.net/7.8.2/video.js"></script>
-  <script>videojs(document.querySelector('#barc'));</script>
-  <script>videojs(document.querySelector('#joe'));</script>
-
-
-  <!-- <script src="videojs-contrib-hls.min.js"></script> -->
+    <div class="w3-container">
+        <h1 class="banner">Kicked off Twitch? That's Rick-diculous!</h1>
+        <h2></h2>
+        <h4>In order to view the stream you will either need to use safari or add the native HLS playback extension for
+            <a href="https://addons.mozilla.org/en-US/firefox/addon/native_hls_playback/">Firefox</a> or <a
+                href="https://chrome.google.com/webstore/detail/native-hls-playback/emnphkkblegpebimobpbekeedfgemhof?hl=en-US">Chrome.</a>
+        </h4>
+        <iframe frameborder="1" scrolling="yes" id="music_user"
+            src="https://twitch.tv/embed/music_user/chat?parent=thatsrickdiculous.com" height="500" width="350">
+        </iframe>
+        <video class="video-js vjs-default-skin" controls id="joe">
+            <source src="http://10.168.0.2:8080/hls/stream.m3u8" type="application/x-mpegURL" />
+        </video>
+        <video class="video-js vjs-default-skin" controls id="barc">
+            <source src="https://10.168.0.2:8080/hls/barclay.m3u8" type="application/x-mpegURL" />
+            </p>
+        </video>
+    </div>
+    <!-- <script src="static/video.js"></script> -->
+    <script src="https://vjs.zencdn.net/7.8.2/video.js"></script>
+    {{/* <script>videojs(document.querySelector('#barc'));</script> */}}
+    {{/* <script>videojs(document.querySelector('#joe'));</script> */}}
+    <!-- <script src="videojs-contrib-hls.min.js"></script> -->
 
 </body>
 
 </html>
 
 <style>
-  .container {
-    background-color: green;
-  }
+    .container {
+         
+    }
 
-  body {
-    background-color: black;
-  }
+    body {
+        background-image: linear-gradient(to bottom right, #11998e, #38ef7d);
+    }
+
+    .banner {
+      text-align: center;
+    }
 </style>
