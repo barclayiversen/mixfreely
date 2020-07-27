@@ -1,7 +1,6 @@
 package main
 
 import (
-	"fmt"
 	"html/template"
 	"log"
 	"net/http"
@@ -16,12 +15,16 @@ func init() {
 func main() {
 	http.Handle("/static", http.StripPrefix("/static/", http.FileServer(http.Dir("."))))
 	http.HandleFunc("/", dog)
+	http.HandleFunc("/channel2", dog2)
 	log.Fatal(http.ListenAndServe(":8081", nil))
 }
 
 func dog(w http.ResponseWriter, req *http.Request) {
-	err := tpl.ExecuteTemplate(w, "index.html", nil)
-	if err != nil {
-		fmt.Println(err)
-	}
+	w.Header().Set("Access-Control-Allow-Origin", "*")
+	tpl.ExecuteTemplate(w, "index.html", nil)
+}
+
+func dog2(w http.ResponseWriter, req *http.Request) {
+	w.Header().Set("Access-Control-Allow-Origin", "*")
+	tpl.ExecuteTemplate(w, "channel2.html", nil)
 }

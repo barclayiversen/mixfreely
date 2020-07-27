@@ -14,31 +14,37 @@
     <div class="w3-container">
         <h1 class="banner">Kicked off Twitch? That's Rick-diculous!</h1>
         <h2> 
-		    <a href="/channel2">Channel 2</a>
+		    <a href="/channel1">Channel 1</a>
 	    </h2>
         <h4>In order to view the stream you will either need to use safari or add the native HLS playback extension for
             <a href="https://addons.mozilla.org/en-US/firefox/addon/native_hls_playback/">Firefox</a> or 
             <a href="https://chrome.google.com/webstore/detail/native-hls-playback/emnphkkblegpebimobpbekeedfgemhof?hl=en-US">Chrome.</a> If you can't see chat, try disabling your ad-blocker. 
         </h4>
-	    <div class="main">
-        	<video class="video-js vjs-default-skin" autoplay preload="auto" controls id="video1">
-            	<source src="https://live.thatsrickdiculous.com/hls/KRRIFZ.m3u8" type="application/x-mpegURL" />
-        	</video>
-        </div>
-	    <div class="menu">
-            <iframe frameborder="1" scrolling="yes" id="music_user" src="https://twitch.tv/embed/music_user/chat?parent=thatsrickdiculous.com" height="500" width="350">
-            </iframe>
+        <div class="row">
+            <div class="main">
+                <video class="video-js vjs-default-skin" autoplay preload="auto" controls id="video1">
+                    <source src="https://live.thatsrickdiculous.com/hls2/KRRIFZ.m3u8" type="application/x-mpegURL" />
+                </video>
+            </div>
+            <div class="menu">
+                <iframe frameborder="1" scrolling="yes" id="spracto" src="https://twitch.tv/embed/spracto/chat?parent=thatsrickdiculous.com" height="500" width="350">
+                </iframe>
+            </div>
         </div>
     </div>
     <script src="https://vjs.zencdn.net/7.8.2/video.js"></script>
-    <script>videojs(document.querySelector('#video1'));</script>
+    <script>
+        videojs(document.querySelector('#video1', {
+        reponsive: true
+        }));
+    </script>
 </body>
 
 </html>
 
 <style>
     .w3-container {
-        padding-bottom: 10%;
+        margin-bottom: 10%;
     }
     .container {
          
